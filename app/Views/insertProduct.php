@@ -6,22 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-<form action="/save" method="post">
+<form action="/saveProduct" method="post">
     <input type="hidden" name="id" value="">
-    <label>Product Name</label>
-    <input type="text" name="ProductName" value="">
-    <label>Product Description</label>
-    <input type="text" name="ProductDescription" value="">
-    <label>Quantity</label>
-    <input type="text" name="ProductQuantity" value="">
-    <label>Price</label>
-    <input type="text" name="Product Price" value="">
-    <label>Category</label>
-    <select name="ProductCategory" id="ProductCategory">
-        <?php foreach(): ?>
-        <option value=""></option>
-    </select>
-    <a href="/productView"><input type="submit" name="" value="submit"></a>
+    <label>Product Name</label><br>
+    <input type="text" name="ProductName" value=""><br>
+    <label>Product Description</label><br>
+    <input type="text" name="ProductDescription" value=""><br>
+    <label>Quantity</label><br>
+    <input type="number" name="ProductQuantity" value=""><br>
+    <label>Price</label><br>
+    <input type="number" name="ProductPrice" value=""><br>
+    <label>Category</label><br>
+    <select name="ProductCategory"><br>
+    <?php foreach($pro as $category): ?>
+    <option value="<?= $category['id'] ?>"><?= $category['ProductCategory'] ?></option>
+    <?php endforeach; ?>
+    </select><br>
+    <a href="/productView"><input type="submit" name="" value="ProductSaveForm"></a>
     </form>
 </body>
 </html>

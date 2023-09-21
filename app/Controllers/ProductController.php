@@ -28,6 +28,13 @@ class ProductController extends BaseController
     public function showInsertCategory(){
         return view('insertCategory');
     }
+    public function showInsertProduct(){
+        $data=[
+            'products'=>$this->product->findAll(),
+            'pro'=>$this->category->findAll(),
+        ];
+        return view('insertProduct',$data);
+    }
 
 
     public function showProduct($id){
@@ -38,11 +45,16 @@ class ProductController extends BaseController
         return view('productView',$data);
     }
 
-    public function showCategory(){
+    public function insertProduct(){
         $data=[
-            'products'=>$this->product->find('ProductCategory'),
-            'pro'=>$this->category->find('ProductCategory'),
-        ];
-        return view('insertProduct',$data);
+            'ProductName'=>$this->request->getVar('ProductName'),
+            'ProductDescription'=>$this->request->getVar('ProductDescription'),
+            'ProductQuantity'=>$this->request->getVar('ProductQuantity'),
+            'ProductPrice'=>$this->request->getVar('ProductPrice'),
+            'ProductCategory'=>$this->request->getVar('ProductCategory'),
+    ];
+    $this->product->save($data);
+    return redirect()->to('productView');
     }
+
 }

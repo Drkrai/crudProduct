@@ -14,6 +14,6 @@
             </tr>
         <?php endforeach;?>
     </table>
-        <button><a href="insertView/">Insert Product</a></button>
+        <button><a href="/insertProduct/">Insert Product</a></button>
 </body>
 </html>
