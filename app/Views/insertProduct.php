@@ -19,10 +19,10 @@
     <label>Category</label><br>
     <select name="ProductCategory"><br>
     <?php foreach($pro as $category): ?>
-    <option value="<?= $category['id'] ?>"><?= $category['ProductCategory'] ?></option>
+    <option value="<?= $category['id'] ?>"><?= $category['ProductCategory']?></option>
     <?php endforeach; ?>
     </select><br>
-    <a href="/productView"><input type="submit" name="" value="ProductSaveForm"></a>
+    <a href="/CategoryView/"><input type="submit" name="" value="Save"></a>
     </form>
 </body>
 </html>

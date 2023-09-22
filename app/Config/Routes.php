@@ -12,4 +12,5 @@ $routes->get('/CategoryView', 'ProductController::homePage');
 $routes->get('/productView/(:any)', 'ProductController::showProduct/$1');
 $routes->get('/insertProduct', 'ProductController::showInsertProduct');
 $routes->post('/saveProduct', 'ProductController::insertProduct');
+$routes->get('/editProduct/(:any)', 'ProductController::edit/$1');
 

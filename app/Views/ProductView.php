@@ -10,7 +10,7 @@
     <table>
         <tr>
             <?php foreach ($pro as $prod): ?>
-            <li><a href="productView/<?= $prod['id'] ?>"><?= $prod['ProductName']?></a></li>
+            <li><a href="/editProduct/<?= $prod['id'] ?>"><?= $prod['ProductName']?></a></li>
             </tr>
         <?php endforeach;?>
     </table>
