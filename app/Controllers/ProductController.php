@@ -75,7 +75,7 @@ class ProductController extends BaseController
 
     public function delete($id){
         $this->product->delete($id);
-        return redirect()->to('productView');
+        return redirect()->to('CategoryView');
     }
 
 }

@@ -13,4 +13,5 @@ $routes->get('/productView/(:any)', 'ProductController::showProduct/$1');
 $routes->get('/insertProduct', 'ProductController::showInsertProduct');
 $routes->post('/saveProduct', 'ProductController::insertProduct');
 $routes->get('/editProduct/(:any)', 'ProductController::edit/$1');
+$routes->get('/delete/(:any)', 'ProductController::delete/$1');
 
